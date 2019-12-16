@@ -37,7 +37,7 @@ const App = () => (
                 </AwesomeButton> 
               </a> 
               <div className="space"></div>
-              <a href="https://github.com/lindelof/particles-bg">
+              <a href="https://github.com/nordicgiant2/gh-pages-theme">
                 <AwesomeButton
                   size="medium"
                   type="primary"
