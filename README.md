@@ -1,4 +1,4 @@
-# SN-Landing-Page    
+# github pages theme    
 
 ### DEMO is [here](https://nordicgiant2.github.io/gh-pages-theme-page/)
 
