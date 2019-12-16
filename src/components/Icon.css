@@ -1,0 +1,30 @@
+.icon-con{
+  	margin: 0 30px;
+  	display: inline-block;
+}
+
+.icon{
+	width: 130px;
+}
+
+.icons{
+	margin: 40px 0 30px;
+}
+
+.icon-title{
+	margin-top: 10px;
+	color: #1e88e5;
+}
+
+@media screen and (max-width: 720px) {
+    .icon{
+		width: 60px;
+	}
+}
+
+
+@media screen and (max-width: 400px) {
+    .icons{
+		display: none;
+	}
+}
