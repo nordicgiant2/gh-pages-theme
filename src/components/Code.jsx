@@ -1,11 +1,8 @@
 import Highlight, { defaultProps } from "prism-react-renderer";
 import React from "react";
-import { render } from "react-dom";
 
-const style = {
-  width: 130,
-  marginLeft: 30,
-  marginRight: 30,
+const defaultStyle = {
+  padding: "8px 20px"
 };
 
 const exampleCode = `
@@ -27,17 +24,21 @@ class Example extends Component {
 
 const Code = () => (
   <Highlight {...defaultProps} code={exampleCode} language="jsx">
-    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre className={className} style={style}>
-        {tokens.map((line, i) => (
-          <div {...getLineProps({ line, key: i })}>
-            {line.map((token, key) => (
-              <span {...getTokenProps({ token, key })} />
-            ))}
-          </div>
-        ))}
-      </pre>
-    )}
+    {({ className, style, tokens, getLineProps, getTokenProps }) => {
+      const fStyle = Object.assign(defaultStyle, style);
+
+      return (
+        <pre className={className} style={fStyle}>
+          {tokens.map((line, i) => (
+            <div {...getLineProps({ line, key: i })}>
+              {line.map((token, key) => (
+                <span {...getTokenProps({ token, key })} />
+              ))}
+            </div>
+          ))}
+        </pre>
+      )
+    }}
   </Highlight>
 );
 
